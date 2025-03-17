@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import banner_5 from "../../../assets/images/banners/banner-5.png";
-import icon_1 from "../../../assets/images/services_img/icon-1.png";
+
 import ProSlider from "../../../components/user/slider/Slider";
 import "./Home.css";
 import Product from "../../../components/user/product/Product";
@@ -9,12 +8,54 @@ import ProductDetails from "../../../components/user/product-details/Product-det
 import Part from "../../../components/user/small-part/Part";
 import Banner from "../../../components/user/banner/Banner";
 import HeadSlider from "../../../components/user/head_slider/HeadSlider";
+import Featured from "../../../components/user/featured/Featured";
 export default function Homes() {
   const [banner_data, setBannerData] = useState({});
-  const [allFeatured, setAllFeatured] = useState([]);
-  const [allFeatured_banner, setAllFeaturedBanner] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
-
+  // let products = [
+  //   {
+  //     "id": 1,
+  //     "category_name": "Baking material",
+  //     "title": "Foster Farms Takeout Crispy Classic",
+  //     "by": "Country Crock",
+  //     "rate": 2,
+  //     "price": 12,
+  //     "salePrice": 10,
+  //     "tage": "over",
+  //     "offer": "19%",
+  //     "product_image": "images/product/product-1-1.jpg",
+  //     "populer": "populer",
+  //     "pest_seal": "best_seal"
+  //   },
+  //   {
+  //     "id": 2,
+  //     "category_name": "Baking material",
+  //     "title": "Foster Farms Takeout Crispy Classic",
+  //     "by": "Country Crock",
+  //     "rate": 2,
+  //     "price": 12,
+  //     "salePrice": 10,
+  //     "tage": "sale",
+  //     "offer": "19%",
+  //     "product_image": "images/product/product-2-1.jpg",
+  //     "populer": "populer",
+  //     "pest_seal": "best_seal"
+  //   },
+  //   {
+  //     "id": 3,
+  //     "category_name": "Baking material",
+  //     "title": "Foster Farms Takeout Crispy Classic",
+  //     "by": "Country Crock",
+  //     "rate": 2,
+  //     "price": 12,
+  //     "salePrice": 10,
+  //     "tage": "sale",
+  //     "offer": "19%",
+  //     "product_image": "images/product/product-3-1.jpg",
+  //     "populer": "populer",
+  //     "pest_seal": "best_seal"
+  //   }
+  // ]
   // to get banners
   useEffect(() => {
     fetch(
@@ -26,37 +67,14 @@ export default function Homes() {
     );
   }, []);
 
-  // to get featured
-
-  useEffect(() => {
-    fetch(
-      fetch("http://localhost:4000/featured")
-        .then((res) => res.json())
-        .then((data) => {
-          setAllFeatured(data);
-        })
-    );
-  }, []);
-
-  // get banner
-  useEffect(() => {
-    fetch(
-      fetch("http://localhost:4000/featured_banner")
-        .then((res) => res.json())
-        .then((data) => {
-          setAllFeaturedBanner(data);
-        })
-    );
-  }, []);
-
   // get all product
   useEffect(() => {
     fetch(
       fetch("http://localhost:4000/products")
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
-          setAllProducts(data);
+
+          setAllProducts(() => data);
         })
     );
   }, []);
@@ -70,41 +88,9 @@ export default function Homes() {
       <section className="featured">
         <div className="container-fluid">
           <h2>Featured Categories</h2>
-          <div className="featured_items">
-            {allFeatured.map((ele) => (
-              <div className="featured_item">
-                <img src={ele.image} />
-                <div className="text-center">
-                  <Link>
-                    <h6>{ele.title}</h6>
-                  </Link>
-                  <span>{ele.item_count} items</span>
-                </div>
-              </div>
-            ))}
-          </div>
 
-          <div className="feature_banners">
-            <div className="row">
-              {allFeatured_banner.map((ele, index) => (
-                <div className="col-md-4">
-                  <div
-                    className="feature_banner"
-                    style={{
-                      backgroundImage: `url(images/banners/banner-${
-                        index + 1
-                      }.png)`,
-                    }}
-                  >
-                    <h3>{ele.text}</h3>
-                    <Link>
-                      <button>Shop Now</button>
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <Featured></Featured>
+
         </div>
       </section>
 
@@ -125,18 +111,14 @@ export default function Homes() {
 
           <div className="populer_products">
             {allProducts.map((product) => (
-              // console.log(product)
+              // console.log(product.tage)
 
-              <Product
-                pro_width={19}
-                // product_image={product.product_image}
-                // tage={product.tage}
-                // product={product}
-              ></Product>
+              <Product data={product} pro_width={19}></Product>
+
             ))}
           </div>
-        </div>
-      </section>
+        </div >
+      </section >
 
       <section className="best_sell">
         <div className="container-fluid">
@@ -174,7 +156,7 @@ export default function Homes() {
               <div className="col-md-3">
                 <div className="product_deal">
                   <div>
-                    <img src={banner_5} />
+                    <img src="/images/banners/banner-5.png" />
                   </div>
                   <div className="pro_deal_details">
                     <div className="deal_time">
@@ -204,7 +186,7 @@ export default function Homes() {
               <div className="col-md-3">
                 <div className="product_deal">
                   <div>
-                    <img src={banner_5} />
+                    <img src="/images/banners/banner-5.png" />
                   </div>
                   <div className="pro_deal_details">
                     <div className="deal_time">
@@ -234,7 +216,7 @@ export default function Homes() {
               <div className="col-md-3">
                 <div className="product_deal">
                   <div>
-                    <img src={banner_5} />
+                    <img src="/images/banners/banner-5.png" />
                   </div>
                   <div className="pro_deal_details">
                     <div className="deal_time">
@@ -264,7 +246,7 @@ export default function Homes() {
               <div className="col-md-3">
                 <div className="product_deal">
                   <div>
-                    <img src={banner_5} />
+                    <img src="/images/banners/banner-5.png" />
                   </div>
                   <div className="pro_deal_details">
                     <div className="deal_time">
@@ -321,7 +303,7 @@ export default function Homes() {
         <div className="container-fluid">
           <div className="services">
             <div className="service">
-              <img src={icon_1}></img>
+              <img src="images/services_img/icon-1.png"></img>
               <div>
                 <h5>Best prices & offers</h5>
                 <p>Orders $50 or more</p>
@@ -329,7 +311,7 @@ export default function Homes() {
             </div>
 
             <div className="service">
-              <img src={icon_1}></img>
+              <img src="images/services_img/icon-1.png"></img>
               <div>
                 <h5>Best prices & offers</h5>
                 <p>Orders $50 or more</p>
@@ -337,7 +319,7 @@ export default function Homes() {
             </div>
 
             <div className="service">
-              <img src={icon_1}></img>
+              <img src="images/services_img/icon-1.png"></img>
               <div>
                 <h5>Best prices & offers</h5>
                 <p>Orders $50 or more</p>
@@ -345,7 +327,7 @@ export default function Homes() {
             </div>
 
             <div className="service">
-              <img src={icon_1}></img>
+              <img src="images/services_img/icon-1.png"></img>
               <div>
                 <h5>Best prices & offers</h5>
                 <p>Orders $50 or more</p>
@@ -353,7 +335,7 @@ export default function Homes() {
             </div>
 
             <div className="service">
-              <img src={icon_1}></img>
+              <img src="images/services_img/icon-1.png"></img>
               <div>
                 <h5>Best prices & offers</h5>
                 <p>Orders $50 or more</p>

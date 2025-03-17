@@ -1,9 +1,12 @@
 .banner {
-  background-image: url("../../../assets/images/banners/banner-10-min.png");
+  background-image: url("../../../../public/images/banners/banner-10-min.png");
 
-  padding: 70px 103px;
+  padding-left: 109px;
   position: relative;
   border-radius: 20px;
+  display: flex;
+
+  align-items: center;
 }
 
 .banner img {
@@ -11,6 +14,7 @@
   position: absolute;
   bottom: 0;
   right: 62px;
+  z-index: 1;
 }
 
 .banner .banner_details h2 {
@@ -21,6 +25,12 @@
 .banner .banner_details span {
   margin: 29px 0;
   display: block;
+}
+
+
+.banner .banner_details {
+  position: relative;
+  z-index: 10;
 }
 
 .banner .banner_details .banner_input {

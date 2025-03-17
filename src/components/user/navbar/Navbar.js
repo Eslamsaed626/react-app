@@ -6,7 +6,7 @@ import {
   faHeadphones,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
-import logo from "../../../assets/images/logo.svg";
+// import logo from "/images/logo.svg";
 import Select from "../select/Select";
 import { Link } from "react-router-dom";
 export default function Navbar() {
@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="top_nav py-3">
         <div className="container-fluid">
           <div className="logo">
-            <img src={logo} />
+            <img src="images/logo.svg" />
           </div>
 
           <div className="input_search">

@@ -33,7 +33,6 @@ export default function HeadSlider() {
           ></Banner>
         ))}
 
-        {/* <Banner></Banner> */}
       </Slider>
     </>
   );

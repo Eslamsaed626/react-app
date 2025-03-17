@@ -142,7 +142,7 @@
       "pest_seal": "best_seal"
     },
     {
-      "id": 1,
+      "id": 2,
       "category_name": "Baking material",
       "title": "Foster Farms Takeout Crispy Classic",
       "by": "Country Crock",
@@ -163,9 +163,37 @@
       "rate": 2,
       "price": 12,
       "salePrice": 10,
-      "tage": "sale",
+      "tage": "new",
       "offer": "19%",
       "product_image": "images/product/product-3-1.jpg",
+      "populer": "populer",
+      "pest_seal": "best_seal"
+    },
+    {
+      "id": 4,
+      "category_name": "Baking material",
+      "title": "Foster Farms Takeout Crispy Classic",
+      "by": "Country Crock",
+      "rate": 2,
+      "price": 12,
+      "salePrice": 10,
+      "tage": "new",
+      "offer": "19%",
+      "product_image": "images/product/product-4-1.jpg",
+      "populer": "populer",
+      "pest_seal": "best_seal"
+    },
+    {
+      "id": 5,
+      "category_name": "Baking material",
+      "title": "Foster Farms Takeout Crispy Classic",
+      "by": "Country Crock",
+      "rate": 2,
+      "price": 12,
+      "salePrice": 10,
+      "tage": "new",
+      "offer": "19%",
+      "product_image": "images/product/product-5-1.jpg",
       "populer": "populer",
       "pest_seal": "best_seal"
     }
