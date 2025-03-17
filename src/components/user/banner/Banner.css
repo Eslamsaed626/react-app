@@ -1,0 +1,50 @@
+.banner {
+  background-image: url("../../../assets/images/banners/banner-10-min.png");
+
+  padding: 70px 103px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.banner img {
+  width: 450px;
+  position: absolute;
+  bottom: 0;
+  right: 62px;
+}
+
+.banner .banner_details h2 {
+  font-size: 75px;
+  font-weight: bold;
+}
+
+.banner .banner_details span {
+  margin: 29px 0;
+  display: block;
+}
+
+.banner .banner_details .banner_input {
+  width: 507px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  border-radius: 35px;
+}
+
+.banner .banner_details .banner_input input {
+  flex-grow: 1;
+  padding: 17px;
+  border: none;
+  border-radius: 35px 0 0 35px;
+  outline: none;
+}
+
+.banner .banner_details .banner_input button {
+  outline: none;
+  border: none;
+  padding: 17px 25px;
+  border-radius: 37px;
+  background: #3bb77e;
+  color: #fff;
+  font-size: 18px;
+}
