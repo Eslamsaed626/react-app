@@ -28,7 +28,7 @@ export default function Featured() {
     return (<>
         <div className="featured_items">
             {allFeatured.map((ele, index) => (
-                <div className={`featured_item fet-${index + 1}`}>
+                <div className={`featured_item fet-${index + 1}`} key={ele.id}>
                     <img src={ele.image} />
                     <div className="text-center">
                         <Link>
@@ -43,7 +43,7 @@ export default function Featured() {
         <div className="feature_banners">
             <div className="row">
                 {allFeatured_banner.map((ele, index) => (
-                    <div className="col-md-4">
+                    <div className="col-md-4" key={ele.id}>
                         <div
                             className="feature_banner"
                             style={{

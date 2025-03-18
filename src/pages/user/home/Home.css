@@ -62,6 +62,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .populer .populer_head ul {
@@ -79,6 +80,7 @@
 .populer .populer_products {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* populer */

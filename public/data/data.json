@@ -129,9 +129,9 @@
   "products": [
     {
       "id": 1,
-      "category_name": "Baking material",
-      "title": "Foster Farms Takeout Crispy Classic",
-      "by": "Country Crock",
+      "category_name": "Snack",
+      "title": "Seeds of Change Organic Quinoa, Brown, & Red Rice",
+      "by": " Stouffer",
       "rate": 2,
       "price": 12,
       "salePrice": 10,
@@ -139,12 +139,13 @@
       "offer": "19%",
       "product_image": "images/product/product-1-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "deal_time": "3/20/2-25"
     },
     {
       "id": 2,
-      "category_name": "Baking material",
-      "title": "Foster Farms Takeout Crispy Classic",
+      "category_name": "Hodo Foods",
+      "title": "All Natural Italian-Style Chicken Meatballs",
       "by": "Country Crock",
       "rate": 2,
       "price": 12,
@@ -153,12 +154,13 @@
       "offer": "19%",
       "product_image": "images/product/product-2-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "deal_time": "3/21/2-25"
     },
     {
       "id": 3,
-      "category_name": "Baking material",
-      "title": "Foster Farms Takeout Crispy Classic",
+      "category_name": "Vegetables",
+      "title": "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
       "by": "Country Crock",
       "rate": 2,
       "price": 12,
@@ -167,13 +169,14 @@
       "offer": "19%",
       "product_image": "images/product/product-3-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "deal_time": "3/22/2-25"
     },
     {
       "id": 4,
-      "category_name": "Baking material",
+      "category_name": "Pet Foods",
       "title": "Foster Farms Takeout Crispy Classic",
-      "by": "Country Crock",
+      "by": "Tyson",
       "rate": 2,
       "price": 12,
       "salePrice": 10,
@@ -181,12 +184,13 @@
       "offer": "19%",
       "product_image": "images/product/product-4-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "deal_time": "3/23/2-25"
     },
     {
       "id": 5,
-      "category_name": "Baking material",
-      "title": "Foster Farms Takeout Crispy Classic",
+      "category_name": "Meats",
+      "title": "Foster Farms Takeout Crispy Classic Buffalo Wings",
       "by": "Country Crock",
       "rate": 2,
       "price": 12,
@@ -194,6 +198,76 @@
       "tage": "new",
       "offer": "19%",
       "product_image": "images/product/product-5-1.jpg",
+      "populer": "populer",
+      "pest_seal": "best_seal"
+    },
+    {
+      "id": 6,
+      "category_name": "Coffes",
+      "title": "Blue Diamond Almonds Lightly Salted Vegetables",
+      "by": "Old El Paso",
+      "rate": 2,
+      "price": 12,
+      "salePrice": 10,
+      "tage": "new",
+      "offer": "19%",
+      "product_image": "images/product/product-6-1.jpg",
+      "populer": "populer",
+      "pest_seal": "best_seal"
+    },
+    {
+      "id": 7,
+      "category_name": "Cream",
+      "title": "Chobani Complete Vanilla Greek Yogurt",
+      "by": "Country Crock",
+      "rate": 2,
+      "price": 12,
+      "salePrice": 10,
+      "tage": "new",
+      "offer": "19%",
+      "product_image": "images/product/product-7-1.jpg",
+      "populer": "populer",
+      "pest_seal": "best_seal"
+    },
+    {
+      "id": 8,
+      "category_name": "Hodo Foods",
+      "title": "Chobani Complete Vanilla Greek Yogurt",
+      "by": "StarKist",
+      "rate": 2,
+      "price": 12,
+      "salePrice": 10,
+      "tage": "new",
+      "offer": "19%",
+      "product_image": "images/product/product-8-1.jpg",
+      "populer": "populer",
+      "pest_seal": "best_seal"
+    },
+    {
+      "id": 9,
+      "category_name": "Cream",
+      "title": "Chobani Complete Vanilla Greek Yogurt",
+      "by": "Country Crock",
+      "rate": 2,
+      "price": 12,
+      "salePrice": 10,
+      "tage": "new",
+      "offer": "19%",
+      "product_image": "images/product/product-9-1.jpg",
+      "populer": "populer",
+      "pest_seal": "best_seal"
+    },
+    {
+      "id": 10,
+      "category_name": "Meats",
+      "title": "Chobani Complete Vanilla Greek Yogurt",
+      "by": "NestFood",
+      "rate": 2,
+      "price": 12,
+      "salePrice": 10,
+      "tage": "",
+      "offer": "19%",
+      "product_image": "images/product/product-10-1.jpg",
       "populer": "populer",
       "pest_seal": "best_seal"
     }

@@ -4,9 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.css";
 import Product from "../product/Product";
-export default function ProSlider() {
+export default function ProSlider({ allProduct }) {
+
+
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     // loop: true,
     // autoplay: true,
@@ -45,14 +47,11 @@ export default function ProSlider() {
     <>
       <div className="slider-container">
         <Slider {...settings}>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
+          {allProduct.map(product => (
+            <Product data={product} key={product.d}></Product>
+
+          ))}
+
         </Slider>
       </div>
     </>

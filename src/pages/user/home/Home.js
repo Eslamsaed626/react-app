@@ -12,51 +12,9 @@ import Featured from "../../../components/user/featured/Featured";
 export default function Homes() {
   const [banner_data, setBannerData] = useState({});
   const [allProducts, setAllProducts] = useState([]);
-  // let products = [
-  //   {
-  //     "id": 1,
-  //     "category_name": "Baking material",
-  //     "title": "Foster Farms Takeout Crispy Classic",
-  //     "by": "Country Crock",
-  //     "rate": 2,
-  //     "price": 12,
-  //     "salePrice": 10,
-  //     "tage": "over",
-  //     "offer": "19%",
-  //     "product_image": "images/product/product-1-1.jpg",
-  //     "populer": "populer",
-  //     "pest_seal": "best_seal"
-  //   },
-  //   {
-  //     "id": 2,
-  //     "category_name": "Baking material",
-  //     "title": "Foster Farms Takeout Crispy Classic",
-  //     "by": "Country Crock",
-  //     "rate": 2,
-  //     "price": 12,
-  //     "salePrice": 10,
-  //     "tage": "sale",
-  //     "offer": "19%",
-  //     "product_image": "images/product/product-2-1.jpg",
-  //     "populer": "populer",
-  //     "pest_seal": "best_seal"
-  //   },
-  //   {
-  //     "id": 3,
-  //     "category_name": "Baking material",
-  //     "title": "Foster Farms Takeout Crispy Classic",
-  //     "by": "Country Crock",
-  //     "rate": 2,
-  //     "price": 12,
-  //     "salePrice": 10,
-  //     "tage": "sale",
-  //     "offer": "19%",
-  //     "product_image": "images/product/product-3-1.jpg",
-  //     "populer": "populer",
-  //     "pest_seal": "best_seal"
-  //   }
-  // ]
-  // to get banners
+  const [deal_product, setDealProduct] = useState([]);
+  let deal = []
+
   useEffect(() => {
     fetch(
       fetch("http://localhost:4000/banners")
@@ -77,7 +35,16 @@ export default function Homes() {
           setAllProducts(() => data);
         })
     );
+
+
+
+
+    setDealProduct(allProducts?.filter(product => {
+      return product.id = 1
+    }))
+
   }, []);
+  console.log(deal_product);
 
   return (
     <>
@@ -111,9 +78,8 @@ export default function Homes() {
 
           <div className="populer_products">
             {allProducts.map((product) => (
-              // console.log(product.tage)
 
-              <Product data={product} pro_width={19}></Product>
+              <Product data={product} pro_width={19} key={product.id}></Product>
 
             ))}
           </div>
@@ -137,7 +103,7 @@ export default function Homes() {
 
               <div className="col-md-9">
                 <div className="best_slide">
-                  <ProSlider></ProSlider>
+                  <ProSlider allProduct={allProducts}></ProSlider>
                 </div>
               </div>
             </div>
@@ -153,125 +119,39 @@ export default function Homes() {
           </div>
           <div className="products_deals">
             <div className="row">
-              <div className="col-md-3">
-                <div className="product_deal">
-                  <div>
-                    <img src="/images/banners/banner-5.png" />
-                  </div>
-                  <div className="pro_deal_details">
-                    <div className="deal_time">
-                      <div className="days">
-                        <span>12</span>
-                        <p>Days</p>
-                      </div>
-                      <div className="houre">
-                        <span>12</span>
-                        <p>hour</p>
-                      </div>
-                      <div className="mins">
-                        <span>12</span>
-                        <p>Mins</p>
-                      </div>
-                      <div className="secon">
-                        <span>12</span>
-                        <p>Sec</p>
-                      </div>
+              {allProducts.map(product => (
+                product.deal_time &&
+                <div className="col-md-3">
+                  <div className="product_deal">
+                    <div>
+                      <img src="/images/banners/banner-5.png" />
                     </div>
+                    <div className="pro_deal_details">
+                      <div className="deal_time">
+                        <div className="days">
+                          <span>12</span>
+                          <p>Days</p>
+                        </div>
+                        <div className="houre">
+                          <span>12</span>
+                          <p>hour</p>
+                        </div>
+                        <div className="mins">
+                          <span>12</span>
+                          <p>Mins</p>
+                        </div>
+                        <div className="secon">
+                          <span>12</span>
+                          <p>Sec</p>
+                        </div>
+                      </div>
 
-                    <ProductDetails></ProductDetails>
+                      <ProductDetails data={product}></ProductDetails>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
 
-              <div className="col-md-3">
-                <div className="product_deal">
-                  <div>
-                    <img src="/images/banners/banner-5.png" />
-                  </div>
-                  <div className="pro_deal_details">
-                    <div className="deal_time">
-                      <div className="days">
-                        <span>12</span>
-                        <p>Days</p>
-                      </div>
-                      <div className="houre">
-                        <span>12</span>
-                        <p>hour</p>
-                      </div>
-                      <div className="mins">
-                        <span>12</span>
-                        <p>Mins</p>
-                      </div>
-                      <div className="secon">
-                        <span>12</span>
-                        <p>Sec</p>
-                      </div>
-                    </div>
-
-                    <ProductDetails></ProductDetails>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-3">
-                <div className="product_deal">
-                  <div>
-                    <img src="/images/banners/banner-5.png" />
-                  </div>
-                  <div className="pro_deal_details">
-                    <div className="deal_time">
-                      <div className="days">
-                        <span>12</span>
-                        <p>Days</p>
-                      </div>
-                      <div className="houre">
-                        <span>12</span>
-                        <p>hour</p>
-                      </div>
-                      <div className="mins">
-                        <span>12</span>
-                        <p>Mins</p>
-                      </div>
-                      <div className="secon">
-                        <span>12</span>
-                        <p>Sec</p>
-                      </div>
-                    </div>
-
-                    <ProductDetails></ProductDetails>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-3">
-                <div className="product_deal">
-                  <div>
-                    <img src="/images/banners/banner-5.png" />
-                  </div>
-                  <div className="pro_deal_details">
-                    <div className="deal_time">
-                      <div className="days">
-                        <span>12</span>
-                        <p>Days</p>
-                      </div>
-                      <div className="houre">
-                        <span>12</span>
-                        <p>hour</p>
-                      </div>
-                      <div className="mins">
-                        <span>12</span>
-                        <p>Mins</p>
-                      </div>
-                      <div className="secon">
-                        <span>12</span>
-                        <p>Sec</p>
-                      </div>
-                    </div>
-
-                    <ProductDetails></ProductDetails>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
