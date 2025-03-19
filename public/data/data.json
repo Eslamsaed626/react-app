@@ -199,7 +199,8 @@
       "offer": "19%",
       "product_image": "images/product/product-5-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "top_sell": "top_sell"
     },
     {
       "id": 6,
@@ -213,7 +214,8 @@
       "offer": "19%",
       "product_image": "images/product/product-6-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "trending": "trending"
     },
     {
       "id": 7,
@@ -227,7 +229,8 @@
       "offer": "19%",
       "product_image": "images/product/product-7-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "trending": "trending"
     },
     {
       "id": 8,
@@ -241,7 +244,9 @@
       "offer": "19%",
       "product_image": "images/product/product-8-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "top_sell": "top_sell",
+      "trending": "trending"
     },
     {
       "id": 9,
@@ -269,7 +274,8 @@
       "offer": "19%",
       "product_image": "images/product/product-10-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "top_sell": "top_sell"
     }
   ]
 }

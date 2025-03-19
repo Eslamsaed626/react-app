@@ -13,11 +13,9 @@ function Select() {
       .then((data) => setAllCategories(data));
   }, []);
 
-  function test() {
-    console.log(allCategories);
-  }
 
-  test();
+
+
   function handelOpen() {
     setIsOpen(() => !isOpen);
   }

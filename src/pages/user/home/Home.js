@@ -13,7 +13,7 @@ export default function Homes() {
   const [banner_data, setBannerData] = useState({});
   const [allProducts, setAllProducts] = useState([]);
   const [deal_product, setDealProduct] = useState([]);
-  let deal = []
+  let parts_text = ["Top Selling", "Trending Products", "Recently added", "Top Rated"]
 
   useEffect(() => {
     fetch(
@@ -39,12 +39,11 @@ export default function Homes() {
 
 
 
-    setDealProduct(allProducts?.filter(product => {
-      return product.id = 1
-    }))
+
 
   }, []);
-  console.log(deal_product);
+
+
 
   return (
     <>
@@ -160,10 +159,27 @@ export default function Homes() {
       <section className="sections">
         <div className="container-fluid">
           <div className="row">
-            <Part></Part>
-            <Part></Part>
-            <Part></Part>
-            <Part></Part>
+            {parts_text.map(part => (
+              <Part product={allProducts} type="eslam"></Part>
+
+            ))}
+            {/* {parts_text.map(part => (
+              // console.log(part)
+
+              <Part product={allProducts} key={part}>
+                {part}
+              </Part>
+            ))} */}
+
+            {/* <Part>
+              <h4>Trending Products</h4>
+            </Part>
+            <Part>
+              <h4>Recently added</h4>
+            </Part>
+            <Part>
+              <h4>Top Rated</h4>
+            </Part> */}
           </div>
         </div>
       </section>

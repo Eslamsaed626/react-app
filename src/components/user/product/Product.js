@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import ProductDetails from "../product-details/Product-details";
 
 function Product({ data, pro_width }) {
+  // console.log();
+
 
 
 
