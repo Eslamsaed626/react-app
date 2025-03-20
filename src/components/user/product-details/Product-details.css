@@ -1,5 +1,5 @@
 .product_details {
-  padding: 17px;
+  padding: 0px 22px 22px;
 }
 
 .product_details p {
@@ -11,6 +11,7 @@
   text-decoration: none;
   color: #333;
   transition: all 0.4s ease;
+  font-size: 18px;
 }
 
 .product_details h6 a:hover {
@@ -20,6 +21,7 @@
 .product_details div p span {
   color: #3bb77e;
 }
+
 .product_footer {
   display: flex;
   align-items: center;
@@ -27,13 +29,21 @@
   margin-top: 15px;
 }
 
-.product_footer span {
+.product_footer div {
+  font-size: 20px;
   font-weight: bold;
   color: #3bb77e;
 }
-.product_footer {
-  padding-bottom: 20px;
+
+.product_footer span.price {
+  font-size: 17px;
+  color: #aaa;
+  text-decoration: line-through;
+  margin-left: 9px;
 }
+
+
+
 .product_footer button {
   background: #def9ec;
   color: #3bb77e;
@@ -49,11 +59,13 @@
 .product_footer button:hover {
   background: #3bb77e;
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
-.raite {
-  color: #cfd1d0;
+
+.raite .star {
+  color: #fdc040;
 }
+
 .star:not(:last-of-type) {
   color: #fdc040;
 }

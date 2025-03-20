@@ -13,6 +13,33 @@
   height: 100%;
   margin: 0px 10px;
 }
+
 .slick-track {
   display: flex;
+}
+
+
+.slick-slider .slick-arrow {
+  display: block;
+  background: #aaa !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* text-align: center; */
+  /* line-height: 28px; */
+  z-index: 10;
+  top: 45%;
+}
+
+.slick-slider .slick-arrow.slick-prev {
+  left: 3%;
+}
+
+.slick-slider .slick-arrow.slick-next {
+  right: 3%;
+}
+
+.slick-slider .slick-arrow::after,
+.slick-slider .slick-arrow::before {
+  display: none;
 }

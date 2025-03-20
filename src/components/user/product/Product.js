@@ -6,12 +6,15 @@ import ProductDetails from "../product-details/Product-details";
 function Product({ data, pro_width }) {
   // console.log();
 
+  function hoverFun() {
+    console.log("eslam");
 
+  }
 
 
   return (
     <>
-      <div className={`pop_product ${data && data.tage}`} style={{ width: pro_width + "%" }}>
+      <div className={`pop_product ${data && data.tage}`} style={{ width: pro_width + "%" }} onHover={hoverFun}>
 
         <div className="prduct_img">
           <Link>

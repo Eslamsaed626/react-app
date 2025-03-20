@@ -20,9 +20,7 @@ export default function ProductDetails({ data }) {
 
             <FontAwesomeIcon icon={faStar} className="star" key={e} />
           ))}
-          {/* <FontAwesomeIcon icon={faStar} className="star" />
-          <FontAwesomeIcon icon={faStar} className="star" />
-          <FontAwesomeIcon icon={faStar} className="star" /> */}
+
           <span>{rate}</span>
         </div>
         <div>
@@ -32,12 +30,12 @@ export default function ProductDetails({ data }) {
         </div>
         <div className="product_footer">
           <div>
-            <span>{data && data.price}$</span>
-            <span>{data && data.salePrice}$</span>
+            {data.salePrice && <span>${data.salePrice}</span>}
+            <span className={data.salePrice ? "price" : ""}>${data && data.price}</span>
           </div>
           <button>Add</button>
         </div>
-      </div>
+      </div >
     </>
   );
 }

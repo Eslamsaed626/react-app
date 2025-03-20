@@ -73,6 +73,10 @@
   cursor: pointer;
 }
 
+.populer .populer_head ul li.active {
+  color: #3bb77e;
+}
+
 .populer .populer_products {
   display: flex;
   flex-wrap: wrap;
@@ -82,12 +86,17 @@
 /* populer */
 
 /* bestsell */
+
+.best_head h2 {
+  margin: 36px 0;
+}
+
 .best_sell .best_slider .best_banner {
   background-image: url("../../../../public/images/banners/banner-4.png");
   background-position: center;
   background-size: cover;
   color: #fff;
-  height: 500px;
+  height: 460px;
   border-radius: 10px;
   padding: 71px 77px;
 }
@@ -109,7 +118,7 @@
 }
 
 .best_slide {
-  height: 500px;
+  height: 460x;
   color: #fff;
 }
 
@@ -196,6 +205,7 @@
   font-size: 37px;
   font-weight: bold;
 }
+
 /* banner */
 
 /* services */
