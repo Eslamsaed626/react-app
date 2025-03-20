@@ -140,7 +140,8 @@
       "product_image": "images/product/product-1-1.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
-      "deal_time": "3/20/2-25"
+      "deal_time": "3/20/2-25",
+      "recently": "recently"
     },
     {
       "id": 2,
@@ -170,14 +171,15 @@
       "product_image": "images/product/product-3-1.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
-      "deal_time": "3/22/2-25"
+      "deal_time": "3/22/2-25",
+      "recently": "recently"
     },
     {
       "id": 4,
       "category_name": "Pet Foods",
       "title": "Foster Farms Takeout Crispy Classic",
       "by": "Tyson",
-      "rate": 2,
+      "rate": 4.5,
       "price": 12,
       "salePrice": 10,
       "tage": "new",
@@ -199,8 +201,9 @@
       "offer": "19%",
       "product_image": "images/product/product-5-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal",
-      "top_sell": "top_sell"
+      "pest seal": "best_seal",
+      "top_selling": "top_selling",
+      "recently": "recently"
     },
     {
       "id": 6,
@@ -222,7 +225,7 @@
       "category_name": "Cream",
       "title": "Chobani Complete Vanilla Greek Yogurt",
       "by": "Country Crock",
-      "rate": 2,
+      "rate": 4,
       "price": 12,
       "salePrice": 10,
       "tage": "new",
@@ -237,7 +240,7 @@
       "category_name": "Hodo Foods",
       "title": "Chobani Complete Vanilla Greek Yogurt",
       "by": "StarKist",
-      "rate": 2,
+      "rate": 5,
       "price": 12,
       "salePrice": 10,
       "tage": "new",
@@ -260,7 +263,8 @@
       "offer": "19%",
       "product_image": "images/product/product-9-1.jpg",
       "populer": "populer",
-      "pest_seal": "best_seal"
+      "pest_seal": "best_seal",
+      "top_selling": "top_selling"
     },
     {
       "id": 10,
@@ -275,7 +279,7 @@
       "product_image": "images/product/product-10-1.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
-      "top_sell": "top_sell"
+      "top_selling": "top_selling"
     }
   ]
 }

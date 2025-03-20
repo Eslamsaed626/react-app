@@ -1,11 +1,26 @@
-// import ProductDetails from "../product-details/Product-details";
 import "./Part.css";
-// import small_1 from "../../../assets/images/featured/product-8-1.jpg";
 import Product from "../product/Product";
 
 export default function Part({ type, product }) {
-  // console.log(type);
+  let productPart = [];
 
+  if (type == "Top Selling") {
+    productPart = product.filter((ele) => {
+      return ele.top_selling;
+    });
+  } else if (type == "Trending Products") {
+    productPart = product.filter((ele) => {
+      return ele.trending;
+    });
+  } else if (type == "Top Rated") {
+    productPart = product.filter((ele) => {
+      return ele.rate >= 4;
+    });
+  } else if (type == "Recently added") {
+    productPart = product.filter((ele) => {
+      return ele.recently;
+    });
+  }
 
   return (
     <>
@@ -17,14 +32,9 @@ export default function Part({ type, product }) {
           </div>
           <div className="products_part">
             <div className="small_product">
-              {product.map(pro => (
-                // console.log(type)
-
-                pro[type] &&
-                <Product data={pro}></Product>
+              {productPart.map((product) => (
+                <Product data={product}></Product>
               ))}
-
-
             </div>
           </div>
         </div>

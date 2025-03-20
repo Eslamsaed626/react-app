@@ -4,7 +4,7 @@
 
 .top_nav .container-fluid {
   display: flex;
-  /* justify-content: space-between; */
+
   align-items: center;
 }
 .logo {
@@ -82,7 +82,11 @@
 .icon > span {
   font-size: 18px;
 }
-
+nav {
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+  background: #fff;
+}
 nav .navbar-nav {
   margin: 0 auto 0;
 }
@@ -108,8 +112,20 @@ nav .navbar-brand:hover {
 nav .navbar-nav .nav-item {
   margin: 0 20px;
 }
+nav .navbar-nav .nav-item .nav-link {
+  font-weight: 500;
+  color: #333;
+}
 
+nav .navbar-nav .nav-item .nav-link.active {
+  color: #36c482;
+}
 .services .headIcon {
   font-size: 27px;
   margin-right: 11px;
+}
+.services .number span {
+  font-weight: 600;
+  font-size: 20px;
+  color: #36c482;
 }

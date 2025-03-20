@@ -6,9 +6,8 @@ import {
   faHeadphones,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
-// import logo from "/images/logo.svg";
 import Select from "../select/Select";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
@@ -53,85 +52,76 @@ export default function Navbar() {
         </div>
       </div>
 
-      <nav>
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div className="container-fluid">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <button class="navbar-brand" href="#">
-                Browse All Categore
-              </button>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <Link
-                      class="nav-link active"
-                      aria-current="page"
-                      to="/home"
-                    >
-                      Home
-                    </Link>
-                  </li>
+          <button class="navbar-brand" href="#">
+            Browse All Categore
+          </button>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="/">
+                  Home
+                </NavLink>
+              </li>
 
-                  <li class="nav-item">
-                    <Link class="nav-link" aria-current="page" to="/about">
-                      About
-                    </Link>
-                  </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="/about">
+                  About
+                </NavLink>
+              </li>
 
-                  <li class="nav-item">
-                    <Link class="nav-link" aria-current="page" to="/shop">
-                      Shop
-                    </Link>
-                  </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="/shop">
+                  Shop
+                </NavLink>
+              </li>
 
-                  <li class="nav-item">
-                    <Link class="nav-link" aria-current="page" to="vendors">
-                      Vendors
-                      <i class="fa-solid fa-arrow-down"></i>
-                    </Link>
-                  </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="vendors">
+                  Vendors
+                  <i className="fa-solid fa-arrow-down"></i>
+                </NavLink>
+              </li>
 
-                  <li class="nav-item">
-                    <Link class="nav-link" aria-current="page" to="/megamenu">
-                      Mega Menu
-                    </Link>
-                  </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  aria-current="page"
+                  to="/megamenu"
+                >
+                  Mega Menu
+                </NavLink>
+              </li>
 
-                  <li class="nav-item">
-                    <Link class="nav-link" aria-current="page" to="/blog">
-                      Blog
-                    </Link>
-                  </li>
-                  <li class="nav-item">
-                    <Link class="nav-link" href="#">
-                      Pages
-                    </Link>
-                  </li>
-                </ul>
-                <div className="services">
-                  <FontAwesomeIcon
-                    icon={faHeadphones}
-                    className="headIcon"
-                  ></FontAwesomeIcon>
-                  <div className="number">
-                    <span>1900 - 888</span>
-                    <p className="m-0">24/7 Support Center</p>
-                  </div>
-                </div>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/blog">
+                  Blog
+                </NavLink>
+              </li>
+            </ul>
+            <div className="services">
+              <FontAwesomeIcon
+                icon={faHeadphones}
+                className="headIcon"
+              ></FontAwesomeIcon>
+              <div className="number">
+                <span>1900 - 888</span>
+                <p className="m-0">24/7 Support Center</p>
               </div>
             </div>
-          </nav>
+          </div>
         </div>
       </nav>
     </>

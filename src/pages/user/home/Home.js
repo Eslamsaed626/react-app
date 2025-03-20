@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import ProSlider from "../../../components/user/slider/Slider";
 import "./Home.css";
@@ -12,8 +12,23 @@ import Featured from "../../../components/user/featured/Featured";
 export default function Homes() {
   const [banner_data, setBannerData] = useState({});
   const [allProducts, setAllProducts] = useState([]);
-  const [deal_product, setDealProduct] = useState([]);
-  let parts_text = ["Top Selling", "Trending Products", "Recently added", "Top Rated"]
+  const [popouler_item, setPopulerItem] = useState(0);
+  let parts_text = [
+    "Top Selling",
+    "Trending Products",
+    "Recently added",
+    "Top Rated",
+  ];
+
+  let populer_list = [
+    "All",
+    "Milks & Dairies",
+    "Coffes & Teas",
+    "Pet Foods",
+    "Meats",
+    "Vegetables",
+    "Fruits",
+  ];
 
   useEffect(() => {
     fetch(
@@ -31,19 +46,10 @@ export default function Homes() {
       fetch("http://localhost:4000/products")
         .then((res) => res.json())
         .then((data) => {
-
           setAllProducts(() => data);
         })
     );
-
-
-
-
-
-
   }, []);
-
-
 
   return (
     <>
@@ -56,7 +62,6 @@ export default function Homes() {
           <h2>Featured Categories</h2>
 
           <Featured></Featured>
-
         </div>
       </section>
 
@@ -65,25 +70,24 @@ export default function Homes() {
           <div className="populer_head">
             <h3>Popular Products</h3>
             <ul className="list-unstyled">
-              <li>all</li>
-              <li>Milks & Dairies</li>
-              <li>Coffes & Teas</li>
-              <li>Pet Foods</li>
-              <li>Meats</li>
-              <li>Vegetables</li>
-              <li>Fruits</li>
+              {populer_list.map((item, index) => (
+                <li
+                  onClick={() => setPopulerItem(index)}
+                  className={popouler_item === index ? "active" : ""}
+                >
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="populer_products">
             {allProducts.map((product) => (
-
               <Product data={product} pro_width={19} key={product.id}></Product>
-
             ))}
           </div>
-        </div >
-      </section >
+        </div>
+      </section>
 
       <section className="best_sell">
         <div className="container-fluid">
@@ -118,39 +122,40 @@ export default function Homes() {
           </div>
           <div className="products_deals">
             <div className="row">
-              {allProducts.map(product => (
-                product.deal_time &&
-                <div className="col-md-3">
-                  <div className="product_deal">
-                    <div>
-                      <img src="/images/banners/banner-5.png" />
-                    </div>
-                    <div className="pro_deal_details">
-                      <div className="deal_time">
-                        <div className="days">
-                          <span>12</span>
-                          <p>Days</p>
+              {allProducts.map(
+                (product) =>
+                  product.deal_time && (
+                    <div className="col-md-3">
+                      <div className="product_deal">
+                        <div>
+                          <img src="/images/banners/banner-5.png" />
                         </div>
-                        <div className="houre">
-                          <span>12</span>
-                          <p>hour</p>
-                        </div>
-                        <div className="mins">
-                          <span>12</span>
-                          <p>Mins</p>
-                        </div>
-                        <div className="secon">
-                          <span>12</span>
-                          <p>Sec</p>
+                        <div className="pro_deal_details">
+                          <div className="deal_time">
+                            <div className="days">
+                              <span>12</span>
+                              <p>Days</p>
+                            </div>
+                            <div className="houre">
+                              <span>12</span>
+                              <p>hour</p>
+                            </div>
+                            <div className="mins">
+                              <span>12</span>
+                              <p>Mins</p>
+                            </div>
+                            <div className="secon">
+                              <span>12</span>
+                              <p>Sec</p>
+                            </div>
+                          </div>
+
+                          <ProductDetails data={product}></ProductDetails>
                         </div>
                       </div>
-
-                      <ProductDetails data={product}></ProductDetails>
                     </div>
-                  </div>
-                </div>
-              ))}
-
+                  )
+              )}
             </div>
           </div>
         </div>
@@ -159,27 +164,9 @@ export default function Homes() {
       <section className="sections">
         <div className="container-fluid">
           <div className="row">
-            {parts_text.map(part => (
-              <Part product={allProducts} type="eslam"></Part>
-
+            {parts_text.map((part) => (
+              <Part product={allProducts} type={part}></Part>
             ))}
-            {/* {parts_text.map(part => (
-              // console.log(part)
-
-              <Part product={allProducts} key={part}>
-                {part}
-              </Part>
-            ))} */}
-
-            {/* <Part>
-              <h4>Trending Products</h4>
-            </Part>
-            <Part>
-              <h4>Recently added</h4>
-            </Part>
-            <Part>
-              <h4>Top Rated</h4>
-            </Part> */}
           </div>
         </div>
       </section>
