@@ -2,7 +2,7 @@
 
   border: 1px solid #e5e0e0;
   border-radius: 22px;
-  /* height: 420px !important; */
+
   transition: all 0.5s ease;
   margin: 0 5px 20px 5px;
 }
@@ -11,6 +11,13 @@
   border-color: #3bb77e;
   box-shadow: 0 0 10px #aaa;
 }
+
+.pop_product:hover .prduct_img a img:first-child {
+
+  visibility: hidden;
+  transition: all .2s ease;
+}
+
 
 .pop_product a {
   display: inline-block;
@@ -25,6 +32,12 @@
   width: 200px;
   height: 220px;
   margin-top: 20px;
+  transition: all .2s ease;
+
+}
+
+.pop_product .prduct_img a img:first-child {
+  position: absolute;
 }
 
 .pop_product.new .prduct_img span {

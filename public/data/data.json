@@ -138,6 +138,7 @@
       "tage": "over",
       "offer": "19%",
       "product_image": "images/product/product-1-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
       "deal_time": "3/20/2-25",
@@ -154,6 +155,7 @@
       "tage": "sale",
       "offer": "19%",
       "product_image": "images/product/product-2-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
       "deal_time": "3/21/2-25"
@@ -169,6 +171,7 @@
       "tage": "new",
       "offer": "19%",
       "product_image": "images/product/product-3-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
       "deal_time": "3/22/2-25",
@@ -185,6 +188,7 @@
       "tage": "new",
       "offer": "19%",
       "product_image": "images/product/product-4-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
       "deal_time": "3/23/2-25"
@@ -200,6 +204,7 @@
       "tage": "new",
       "offer": "19%",
       "product_image": "images/product/product-5-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest seal": "best_seal",
       "top_selling": "top_selling",
@@ -215,6 +220,7 @@
       "tage": "new",
       "offer": "19%",
       "product_image": "images/product/product-6-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
       "trending": "trending"
@@ -230,6 +236,7 @@
       "tage": "new",
       "offer": "19%",
       "product_image": "images/product/product-7-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
       "trending": "trending"
@@ -245,6 +252,7 @@
       "tage": "new",
       "offer": "19%",
       "product_image": "images/product/product-8-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
       "top_sell": "top_sell",
@@ -261,6 +269,7 @@
       "tage": "new",
       "offer": "19%",
       "product_image": "images/product/product-9-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
       "top_selling": "top_selling"
@@ -276,6 +285,7 @@
       "tage": "",
       "offer": "19%",
       "product_image": "images/product/product-10-1.jpg",
+      "product_image_2": "images/product/product-1-2.jpg",
       "populer": "populer",
       "pest_seal": "best_seal",
       "top_selling": "top_selling"
